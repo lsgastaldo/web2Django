@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center">{{ args.title }}</h2><hr>
+    <div class="row">
+        <div class="col-md-12">
+            <figure class="figure">
+                    <img src="{{ args.news.img_file }}" class="figure-img img-fluid rounded">
+                    <figcaption class="figure-caption">{{ args.index_body }}.</figcaption>
+            </figure>
+        </div>
+        <div class="col-md-12">
+            {{ args.body }}
+        </div>
+    </div>
+</div>
+{% endblock %}

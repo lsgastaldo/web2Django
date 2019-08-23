@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+<!--User Register-->
+{% block content %}
+<h3>Create Account</h3><hr>
+<div class="container" style="background-image: url('/static/images/signup1.jpg');">
+    <div class="row">
+        <div class="bg col-md-4" style="height: 720px;"></div>
+        <div class="col-md-8">
+            <form class="form form-horizontal" enctype="multipart/form-data" method="POST">
+                {% csrf_token %}
+                <p>{{ user_form.username }}</p>
+                <p>{{ user_form.first_name }}</p>
+                <p>{{ user_form.last_name }}</p>
+                <p>{{ user_form.email }}</p>
+                <p>{{ profile_form.about_me }}</p>
+                <p>{{ profile_form.img_file }}</p>
+                <p>{{ user_form.password }}</p>
+                <button class="btn btn-primary btn-block" type="submit"> Sign Up! </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+<!-- Post News -->
+{% block content %}
+<div class="container">
+    <h5>Post News</h5><hr>
+    <form class="form form-horizontal" enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        <p>Title {{ news_form.title }}</p>
+        <p>Index Body {{ news_form.index_body }}</p>
+        <p>Body {{ news_form.body }}</p>
+        <p>News Image - {{ news_form.img_file }}</p>
+        <p>News Text File - {{ news_form.news_file }}</p>
+    <button class="btn btn-primary btn-block" type="submit"> Post </button>
+    </form>
+</div>
+{% endblock %}
